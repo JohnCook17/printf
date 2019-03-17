@@ -25,3 +25,13 @@ void prints(va_list list)
 	for (i = 0; s[i]; i++)
 		_putchar(s[i]);
 }
+/**
+ * printp - print percentage.
+ *list: argument lists.
+ *
+ *Return: Nothing.
+ */
+void printp(va_list list)
+{
+	_putchar('%');
+}
