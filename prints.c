@@ -3,7 +3,7 @@
  * prints - prints a string
  * @list: list of values to print
  */
-void prints(va_list list)
+int prints(va_list list)
 {
 	int i = 0;
 	char *s = va_arg(list, char *);
@@ -13,4 +13,5 @@ void prints(va_list list)
 		_putchar(s[i]);
 		i++;
 	}
+	return (i);
 }
