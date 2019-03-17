@@ -5,9 +5,10 @@
  *
  * Return: Nothing.
  */
-void printc(va_list list)
+int printc(va_list list)
 {
 	_putchar(va_arg(list, int));
+	return (1);
 }
 /**
  * prints - print string.
@@ -15,7 +16,7 @@ void printc(va_list list)
  *
  * Return: Nothing.
  */
-void prints(va_list list)
+int prints(va_list list)
 {
 	int i;
 	char *s = va_arg(list, char*);
@@ -24,6 +25,7 @@ void prints(va_list list)
 		_putchar('');
 	for (i = 0; s[i]; i++)
 		_putchar(s[i]);
+	return (i);
 }
 /**
  * printp - print percentage.
@@ -31,7 +33,8 @@ void prints(va_list list)
  *
  *Return: Nothing.
  */
-void printp(va_list list)
+int printp(va_list list)
 {
 	_putchar('%');
+	return (1);
 }
