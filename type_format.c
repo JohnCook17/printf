@@ -34,8 +34,8 @@ int prints(va_list list)
  *
  *Return: Nothing.
  */
-int printp(__attribute__((unused))va_list list)
+/*int printp(__attribute__((unused))va_list list)
 {
 	_putchar('%');
 	return (1);
-}
+}*/
