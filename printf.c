@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 		{"s", prints},
 		{"d", printd},
 		{"i", printi},
-		{"%", printp},
 		{NULL, NULL}
 	};
 
@@ -19,6 +18,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '%')
+				_putchar('%');
 			while (f[j].type)
 			{
 				if (format[i + 1] == *f[j].type)
