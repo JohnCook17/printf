@@ -18,11 +18,10 @@ typedef struct form
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int per(va_list s);
-int printc(va_list s);
-int prints(va_list s);
-int printd(va_list s);
-int printi(va_list s);
-int printp(va_list s);
+int printc(va_list list);
+int prints(va_list list);
+int printd(va_list list);
+int printi(va_list list);
+int printp(va_list list);
 
 #endif /* HOLBERTON_H */
