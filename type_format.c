@@ -22,18 +22,19 @@ int prints(va_list list)
 	char *s = va_arg(list, char*);
 
 	if (s)
-		_putchar('');
-	for (i = 0; s[i]; i++)
-		_putchar(s[i]);
+	{
+		for (i = 0; s[i]; i++)
+			_putchar(s[i]);
+	}
 	return (i);
 }
 /**
  * printp - print percentage.
- *list: argument lists.
+ *@list: argument lists.
  *
  *Return: Nothing.
  */
-int printp(va_list list)
+int printp(__attribute__((unused))va_list list)
 {
 	_putchar('%');
 	return (1);
