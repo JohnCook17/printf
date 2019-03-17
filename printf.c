@@ -4,6 +4,7 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j = 0;
+	int x;
 	va_list list;
 	form_t f[] = {
 		{"c", printc},
@@ -24,15 +25,16 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == *f[j].type)
 				{
-					f[j].func(list);
+					x = f[j].func(list);
+					i++;
 				}
 				j++;
 			}
 		}
-		else
+		else if (format[i] != '\0')
 			_putchar(format[i]);
 		i++;
 	}
 	va_end(list);
-	return (0);
+	return (x);
 }
