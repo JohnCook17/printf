@@ -14,9 +14,9 @@ typedef struct form
 int _putchar(char c);
 char *simpleprint(va_list l);
 void per(va_list s);
-void printc(char *s);
-void prints(char *s);
-void printd(char *s);
-void printi(char *s);
+void printc(va_list s);
+void prints(va_list s);
+void printd(va_list s);
+void printi(va_list s);
 
 #endif /* HOLBERTON_H */
