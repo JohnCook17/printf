@@ -1,10 +1,15 @@
 #include "holberton.h"
-
+/**
+ * _printf - Replicates the printf function
+ * @format: The input given
+ *
+ * Return: returns the characters printed
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j = 0;
-	int x;
+	int x = 0;
 	va_list list;
 	form_t f[] = {
 		{"c", printc},
@@ -36,5 +41,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(list);
-	return (x);
+	return (x + i);
 }
