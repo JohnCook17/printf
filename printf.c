@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 		{"c", printc},
 		{"s", prints},
 		/*{"d", printd},*/
-		/*{"i", printi},*/
+		{"i", printi},
 		{NULL, NULL}
 	};
 
