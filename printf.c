@@ -12,10 +12,10 @@ int _printf(const char *format, ...)
 	int x = 0;
 	va_list list;
 	form_t f[] = {
-		{"c", printc},
-		{"s", prints},
-		/*{"d", printd},*/
-		{"i", printi},
+		{"c", print_c},
+		{"s", print_s},
+		/*{"d", print_d},*/
+		{"i", print_i},
 		{NULL, NULL}
 	};
 
