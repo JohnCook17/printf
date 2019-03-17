@@ -8,8 +8,8 @@ int _printf(const char *format, ...)
 	form_t f[] = {
 		{"c", printc},
 		{"s", prints},
-		{"d", printd},
-		{"i", printi},
+		/*{"d", printd},*/
+		/*{"i", printi},*/
 		{NULL, NULL}
 	};
 
