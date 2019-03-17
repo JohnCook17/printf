@@ -28,14 +28,3 @@ int prints(va_list list)
 	}
 	return (i);
 }
-/**
- * printp - print percentage.
- *@list: argument lists.
- *
- *Return: Nothing.
- */
-/*int printp(__attribute__((unused))va_list list)
-{
-	_putchar('%');
-	return (1);
-}*/
