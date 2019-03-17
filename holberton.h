@@ -1,5 +1,10 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdarg.h>
+
 /**
  * struct form - format info for string
  * @type: type of formatting to take place
@@ -8,15 +13,16 @@
 typedef struct form
 {
 	char *type;
-	void (*func)(va_list);
-} format;
+	int (*func)(va_list list);
+} form_t;
 
+int _printf(const char *format, ...);
 int _putchar(char c);
-char *simpleprint(va_list l);
-void per(va_list s);
-void printc(char *s);
-void prints(char *s);
-void printd(char *s);
-void printi(char *s);
+int per(va_list s);
+int printc(va_list s);
+int prints(va_list s);
+int printd(va_list s);
+int printi(va_list s);
+int printp(va_list s);
 
 #endif /* HOLBERTON_H */
