@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * print_c - print character.
  * @list: argument lists.
@@ -18,12 +19,13 @@ int print_c(va_list list)
  */
 int print_s(va_list list)
 {
+	int i;
 	int count;
 	char *s  = va_arg(list, char *);
 
 	if (s == NULL)
 		s = "(null)";
-	for (count = 0; s; s++, count++)
-		_putchar(*s);
+	for (count = 0, i = 0; s[i]; i++, count++)
+		_putchar(s[i]);
 	return (count);
 }
