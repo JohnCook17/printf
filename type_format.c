@@ -18,12 +18,12 @@ int print_c(va_list list)
  */
 int print_s(va_list list)
 {
-	int i;
-	char *s = va_arg(list, char*);
+	int count;
+	char *s  = va_arg(list, char *);
 
 	if (s == NULL)
 		s = "(null)";
-	for (i = 0; s[i]; i++)
-		_putchar(s[i]);
-	return (i);
+	for (count = 0; s; s++, count++)
+		_putchar(*s);
+	return (count);
 }
