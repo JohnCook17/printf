@@ -23,10 +23,7 @@ int print_s(va_list list)
 
 	if (s == NULL)
 		s = "(null)";
-	if (s)
-	{
-		for (i = 0; s[i]; i++)
-			_putchar(s[i]);
-	}
+	for (i = 0; s[i]; i++)
+		_putchar(s[i]);
 	return (i);
 }
