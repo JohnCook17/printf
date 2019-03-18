@@ -9,6 +9,7 @@ int _printf(const char *format, ...)
 {
 	const char *pointer;
 	int count = 0;
+	int prevcount = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -27,7 +28,15 @@ int _printf(const char *format, ...)
 				count++;
 				continue;
 			}
+			prevcount = count;
 			count += op_type(*pointer, list);
+			if (count == prevcount)
+			{
+				_putchar('%');
+				_putchar(*pointer);
+				count += 2;
+				continue;
+			}
 		}
 		else
 		{
