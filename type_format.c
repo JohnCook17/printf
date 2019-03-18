@@ -21,6 +21,8 @@ int print_s(va_list list)
 	int i;
 	char *s = va_arg(list, char*);
 
+	if (s == NULL)
+		s = "(null)";
 	if (s)
 	{
 		for (i = 0; s[i]; i++)
