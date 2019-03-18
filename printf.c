@@ -22,9 +22,11 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	if (!format || (format[0] == '%' && !format[1]))
+	if (format == NULL)
 		return (-1);
-
+/*	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+*/
 	for (pointer = format; *pointer; pointer++)
 	{
 		if (*pointer == '%')
