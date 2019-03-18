@@ -8,16 +8,17 @@
 int _printf(const char *format, ...)
 {
 	const char *pointer;
-	int j = 0;
 	int count = 0;
 	va_list list;
+/* code out into function
 	form_t f[] = {
 		{"c", print_c},
 		{"s", print_s},
-		/**{"d", print_i},
-		   {"i", print_i},*/
+		{"d", print_i},
+		{"i", print_i},
 		{NULL, NULL}
 	};
+ code out into function */
 
 	va_start(list, format);
 
@@ -35,15 +36,20 @@ int _printf(const char *format, ...)
 				count++;
 				continue;
 			}
-/* rewrite */
+			count += op_type(*pointer, list);
+/* rewrite
 			for (j = 0; f[j].type; j++)
 			{
+<<<<<<< HEAD
 				if (pointer == f[j].type)
+=======
+				if (*pointer == *f[j].type)
+>>>>>>> John
 				{
 					count += f[j].func(list);
 				}
 			}
-/* rewrite */
+ rewrite */
 		}
 		else
 		{
