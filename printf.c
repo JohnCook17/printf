@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				count++;
 				continue;
 			}
-			count += op_type(pointer, list);
+			count += op_type(*pointer, list);
 /* rewrite
 			for (j = 0; f[j].type; j++)
 			{
