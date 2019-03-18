@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	const char *pointer;
 	int j = 0;
 	int count = 0;
 	va_list list;
@@ -20,25 +20,36 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(list, format);
+
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+
+	for (pointer = format; *pointer; pointer++)
 	{
-		if (format[i] == '%')
+		if (pointer == '%')
 		{
-			if (format[i + 1] == '%')
-				count += _putchar('%');
+			pointer++
+			if (*pointer == '%')
+			{
+				_putchar('%');
+				count++;
+				continue;
+			}
+/* rewrite */
 			for (j = 0; f[j].type; j++)
 			{
-				if (format[i + 1] == *f[j].type)
+				if (pointer == *f[j].type)
 				{
 					count += f[j].func(list);
-					i++;
 				}
 			}
+/* rewrite */
 		}
-		else if (format[i] != '\0')
-			count += _putchar(format[i]);
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
 	}
 	va_end(list);
 	return (count);
