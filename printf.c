@@ -10,23 +10,12 @@ int _printf(const char *format, ...)
 	const char *pointer;
 	int count = 0;
 	va_list list;
-/* code out into function
-	form_t f[] = {
-		{"c", print_c},
-		{"s", print_s},
-		{"d", print_i},
-		{"i", print_i},
-		{NULL, NULL}
-	};
- code out into function */
 
 	va_start(list, format);
 
-	if (format == NULL)
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-/*	if (!format || (format[0] == '%' && !format[1]))
-		return (-1);
-*/
+
 	for (pointer = format; *pointer; pointer++)
 	{
 		if (*pointer == '%')
@@ -39,19 +28,6 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			count += op_type(*pointer, list);
-/* rewrite
-			for (j = 0; f[j].type; j++)
-			{
-<<<<<<< HEAD
-				if (pointer == f[j].type)
-=======
-				if (*pointer == *f[j].type)
->>>>>>> John
-				{
-					count += f[j].func(list);
-				}
-			}
- rewrite */
 		}
 		else
 		{
