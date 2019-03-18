@@ -7,38 +7,42 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int j = 0;
+	const char *pointer;
 	int count = 0;
+	int prevcount = 0;
 	va_list list;
-	form_t f[] = {
-		{"c", print_c},
-		{"s", print_s},
-		/**{"d", print_i},
-		   {"i", print_i},*/
-		{NULL, NULL}
-	};
 
 	va_start(list, format);
+
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-	for (i = 0; format[i] != '\0', i++)
+
+	for (pointer = format; *pointer; pointer++)
 	{
-		if (format[i] == '%')
+		if (*pointer == '%')
 		{
-			if (format[i + 1] == '%')
-				count += _putchar('%');
-			for (j = 0; f[j].type; j++)
+			pointer++;
+			if (*pointer == '%')
 			{
-				if (format[i + 1] == *f[j].type)
-				{
-					count += f[j].func(list);
-					i++;
-				}
+				_putchar('%');
+				count++;
+				continue;
+			}
+			prevcount = count;
+			count += op_type(*pointer, list);
+			if (count == prevcount)
+			{
+				_putchar('%');
+				_putchar(*pointer);
+				count += 2;
+				continue;
 			}
 		}
-		else if (format[i] != '\0')
-			count += _putchar(format[i]);
+		else
+		{
+			_putchar(*pointer);
+			count++;
+		}
 	}
 	va_end(list);
 	return (count);
