@@ -20,7 +20,7 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int print_c(va_list list);
 int print_s(va_list list);
-int print_d(va_list list);
-int print_i(va_list list);
+/**int print_d(va_list list);
+   int print_i(va_list list);*/
 
 #endif /* HOLBERTON_H */
