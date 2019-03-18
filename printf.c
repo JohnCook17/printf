@@ -26,9 +26,9 @@ int _printf(const char *format, ...)
 
 	for (pointer = format; *pointer; pointer++)
 	{
-		if (pointer == '%')
+		if (*pointer == '%')
 		{
-			pointer++
+			pointer++;
 			if (*pointer == '%')
 			{
 				_putchar('%');
@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 /* rewrite */
 			for (j = 0; f[j].type; j++)
 			{
-				if (pointer == *f[j].type)
+				if (pointer == f[j].type)
 				{
 					count += f[j].func(list);
 				}
@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]);
+			_putchar(*pointer);
 			count++;
 		}
 	}
