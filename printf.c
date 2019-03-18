@@ -14,8 +14,8 @@ int _printf(const char *format, ...)
 	form_t f[] = {
 		{"c", print_c},
 		{"s", print_s},
-		{"d", print_i},
-		{"i", print_i},
+		/**{"d", print_i},
+		   {"i", print_i},*/
 		{NULL, NULL}
 	};
 
