@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	int j = 0;
-	int x = 0;
+	int count = 0;
 	va_list list;
 	form_t f[] = {
 		{"c", print_c},
@@ -27,19 +27,19 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%')
-				_putchar('%');
+				count += _putchar('%');
 			for (j = 0; f[j].type; j++)
 			{
 				if (format[i + 1] == *f[j].type)
 				{
-					x = f[j].func(list);
+					count += f[j].func(list);
 					i++;
 				}
 			}
 		}
 		else if (format[i] != '\0')
-			_putchar(format[i]);
+			count += _putchar(format[i]);
 	}
 	va_end(list);
-	return (x + i);
+	return (count);
 }
