@@ -26,7 +26,7 @@ int print_s(va_list list)
 	if (s == NULL)
 	{
 		s = "(null)";
-		count += 6 ;
+		count += 6;
 	}
 	for (count = 0, i = 0; s[i]; i++, count++)
 		_putchar(s[i]);
