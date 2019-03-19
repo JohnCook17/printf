@@ -27,8 +27,7 @@ _printf() function creates output based on the following format specifier:
 | Function | Format specifier | Usage | Example |
 | --- | --- | --- | --- |
 | print_c | %c | Print a character | _printf("%c", 'h') _Prints character _h_ |
-| print_s | %s | Print a string | _printf("Hello %s\n", "World") _Prints "Hello World\
-  " followed by a new line_ |
+| print_s | %s | Print a string | _printf("Hello %s\n", "World") _Prints "Hello World" followed by a new line_ |
 | print_i | %i & %d | Print an integer | _printf("%d and %i\n", 777, 888) _printf two decimal number 777 & 888 followed by a new line_ |
 
 ## File list
