@@ -7,9 +7,9 @@
  */
 int _printf(const char *format, ...)
 {
+	int (*pointer_func)(va_list);
 	const char *pointer;
 	int count = 0;
-	int prevcount = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -28,9 +28,11 @@ int _printf(const char *format, ...)
 				count++;
 				continue;
 			}
-			prevcount = count;
-			count += op_type(*pointer, list);
-			if (count == prevcount)
+			pointer_func = op_type(*pointer);
+			if (pointer_func == NULL)
+				return (-1);
+			count += pointer_func(list);
+			if (!pointer_func)
 			{
 				_putchar('%');
 				_putchar(*pointer);

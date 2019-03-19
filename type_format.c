@@ -8,7 +8,8 @@
  */
 int print_c(va_list list)
 {
-	_putchar(va_arg(list, int));
+	int s = va_arg(list, int);
+	_putchar(s);
 	return (1);
 }
 /**
@@ -26,7 +27,6 @@ int print_s(va_list list)
 	if (s == NULL)
 	{
 		s = "(null)";
-		count += 6;
 	}
 	for (count = 0, i = 0; s[i]; i++, count++)
 		_putchar(s[i]);
