@@ -29,14 +29,17 @@ void print_number(int n)
  */
 int count(int n)
 {
+	unsigned int j;
+
+	j = n;
 	if (n < 0)
 	{
-		n = -n;
-		n = n * 10;
+		j = -n;
+		j = j * 10;
 	}
-	if (n < 10)
+	if (j < 10)
 		return (1);
-	return (1 + count(n / 10));
+	return (1 + count(j / 10));
 
 }
 /**
