@@ -3,11 +3,10 @@
 /**
  * op_type - struct to determine func to call
  * @pointer: pointer to format from printf
- * @list: variadic list
  *
  * Return: returns count form function called, or 0
  */
-int (*op_type(char pointer))(va_list list)
+int (*op_type(char pointer))(va_list)
 {
 	int i;
 	form_t f[] = {

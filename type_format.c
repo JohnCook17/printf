@@ -9,6 +9,7 @@
 int print_c(va_list list)
 {
 	int s = va_arg(list, int);
+
 	_putchar(s);
 	return (1);
 }

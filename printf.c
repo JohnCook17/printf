@@ -13,10 +13,8 @@ int _printf(const char *format, ...)
 	va_list list;
 
 	va_start(list, format);
-
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-
 	for (pointer = format; *pointer; pointer++)
 	{
 		if (*pointer == '%')
