@@ -30,17 +30,20 @@ void print_number(int n)
 int count(int n)
 {
 	unsigned int j;
+	int c = 0;
 
-	j = n;
 	if (n < 0)
 	{
 		j = -n;
-		j = j * 10;
 	}
-	if (j < 10)
-		return (1);
-	return (1 + count(j / 10));
-
+	else
+		j = n;
+	while (j)
+	{
+		j /= 10;
+		c++;
+	}
+	return (c);
 }
 /**
  *print_i - print integer.
@@ -51,7 +54,10 @@ int count(int n)
 int print_i(va_list list)
 {
 	int n = va_arg(list, int);
+	int c = count(n);
 
+	if (n <= 0)
+		c++;
 	print_number(n);
-	return (count(n));
+	return (c);
 }
