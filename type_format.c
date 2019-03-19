@@ -20,7 +20,7 @@ int print_c(va_list list)
 int print_s(va_list list)
 {
 	int i;
-	int count;
+	int count = 0;
 	char *s  = va_arg(list, char *);
 
 	if (s == NULL)
