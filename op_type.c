@@ -13,9 +13,11 @@ int op_type(const char pointer, va_list list)
 	form_t f[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"i", print_i},
+		{"d", print_i}
 	};
 
-	for (i = 0; i < 2; i++)
+	for (i = 0; i < 4; i++)
 		if (pointer == *f[i].type)
 			return (f[i].func(list));
 	return (0);
