@@ -15,7 +15,7 @@ typedef struct form
 	char *type;
 	int (*func)(va_list list);
 } form_t;
-
+int print_i(va_list list);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int op_type(const char pointer, va_list list);
