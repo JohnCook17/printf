@@ -1,5 +1,10 @@
 #include "holberton.h"
-
+/**
+ * print_rot - takes a string and prints the rot13 value
+ * @list: a string to change to rot 13
+ *
+ * Return: returns the number of characters printed
+ */
 int print_rot(va_list list)
 {
 	char *alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
