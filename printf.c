@@ -27,16 +27,13 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			pointer_func = op_type(*pointer);
-			if (pointer_func == NULL)
-				return (-1);
-			count += pointer_func(list);
 			if (!pointer_func)
 			{
-				_putchar('%');
-				_putchar(*pointer);
-				count += 2;
-				continue;
-			}
+				count += _putchar('%');
+				count += _putchar(*pointer);
+
+			} else
+				count += pointer_func(list);
 		}
 		else
 		{
