@@ -21,5 +21,5 @@ int _putchar(char c);
 int (*op_type(char c))(va_list);
 int print_c(va_list list);
 int print_s(va_list list);
-
+int print_rot(va_list list);
 #endif /* HOLBERTON_H */

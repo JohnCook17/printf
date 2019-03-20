@@ -13,10 +13,11 @@ int (*op_type(char pointer))(va_list)
 		{'c', print_c},
 		{'s', print_s},
 		{'i', print_i},
-		{'d', print_i}
+		{'d', print_i},
+		{'R', print_rot}
 	};
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 5; i++)
 		if (pointer == f[i].type)
 			return (f[i].func);
 	return (NULL);
