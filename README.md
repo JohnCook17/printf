@@ -13,12 +13,12 @@ The **prototype** that we used:
 
 **int _printf(const char *format, ...);**
 
-format is a character string. The format string is composed of zero or more directives.
+*format is a character string. The format string is composed of zero or more directives.
 
 ---
 
 ## Description
-The _printf() function is built based on our _putchar(). This _printf() write output to stdout, the standard output stream. The function returns  the number of characters printed (excluding the null byte used to end output to strings) or return -1 if the function fail.
+The _printf() function is built based on our _putchar(). This _printf() write output to stdout, the standard output stream. The function returns  the number of characters printed (excluding the null byte used to end output to strings) or return -1 if the function fails.
 
 _printf() function creates output based on the following format specifier:
 
