@@ -7,16 +7,14 @@
  */
 int _printf(const char *format, ...)
 {
+	int (*pointer_func)(va_list);
 	const char *pointer;
 	int count = 0;
-	int prevcount = 0;
 	va_list list;
 
 	va_start(list, format);
-
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-
 	for (pointer = format; *pointer; pointer++)
 	{
 		if (*pointer == '%')
@@ -28,15 +26,14 @@ int _printf(const char *format, ...)
 				count++;
 				continue;
 			}
-			prevcount = count;
-			count += op_type(*pointer, list);
-			if (count == prevcount)
+			pointer_func = op_type(*pointer);
+			if (!pointer_func)
 			{
-				_putchar('%');
-				_putchar(*pointer);
-				count += 2;
-				continue;
-			}
+				count += _putchar('%');
+				count += _putchar(*pointer);
+
+			} else
+				count += pointer_func(list);
 		}
 		else
 		{

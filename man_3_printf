@@ -1,0 +1,98 @@
+.\" manpage for _printf
+.\" By Van and John
+.TH _printf 3 "19 March 2019" "Version 0.9" "_printf manpage"
+.SH NAME
+_printf - A simple version of printf, prints the provided arguments
+.SH SYNOPSIS
+.B #include \(dqholberton.h\(dq
+.br
+ 
+.br
+.B int _printf(const char *
+.R format
+.B , ...);
+.SH DESCRIPTION
+A simple version of
+.B printf()
+it reproduces the
+.B %c
+,
+.B %s
+,
+.B %i
+,
+.B %d
+, functionality of
+.B printf().
+This simple version of
+.B printf()
+writes the input characters and values to stdout, the standard output stream.
+.br
+.B Return value
+.br
+This function will return the number of characters printed, not including the
+null byte, unless it encounters an error in which case it will return -1.
+.br
+.B The conversion specifier
+.br
+To use a conversion specifier
+.B (c, s, d, i)
+type
+.B %
+followed by the deseired conversion specifier.
+.br
+.B c
+.br
+	Prints a single character of type char. Will convert an int to a char,
+	the coresponding ascii value is printed if an int is provided.
+.br
+.B S
+.br
+	Prints a string of type char *. Does not include the null byte.
+.br
+.B d, i
+.br
+	Prints a number of type int.
+.br
+.SH CONFORMING TO
+.B _printf
+conforms to all known C standards
+.SH Bugs
+Does not handle '\\0', the null byte, will print a garbage value to standard out
+if it is passed to the function.
+.br
+.SH EXAMPLE
+#include "holberton.h"
+.br
+ 
+.br
+int main(void)
+.br
+{
+.br
+	_printf("Hello %s\\n", "World"); /*will print Hello World to the standard output.*/
+.br
+	_printf("%c\\n", "Hello"); /*will print H to the standard output.*/
+.br
+	_printf("%d\\n", 123); /*will print 123 to the standard output.*/
+.br
+	_printf("%i\\n", 456); /*will print 456 to the standard output.*/
+.br
+return (0);
+.br
+}
+.br
+.B Output
+.br
+Hello World
+.br
+H
+.br
+123
+.br
+456
+.br
+.SH AUTHORS
+Van Duy Phan
+.br
+John Cook
