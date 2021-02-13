@@ -22,7 +22,6 @@
 Van is a great guy who is very smart, his code is clean and he works hard. He is easy to work with too.
 During this project, our first team project we where all nervous. looking back I would not have had it any
 other way. Van is a great software engineer. I would happily hire Van if I where in a position to do so.
-- John Cook
 
 John is a machine learning engineer now, fluent in Tensorflow, Keras, numpy and many other machine learning
 libraries. He is very good at python, and has experience in reinforcement learning, supervised learning, and
