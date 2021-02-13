@@ -15,6 +15,9 @@ The **prototype** that we used:
 
 format is a character string. The format string is composed of zero or more directives.
 
+
+![alt text](https://github.com/JohnCook17/printf/blob/master/main_printf.PNG?raw=true)
+
 ---
 
 ## Description
