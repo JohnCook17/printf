@@ -5,10 +5,23 @@
 [John Cook - github](https://github.com/JohnCook17)
 [John Cook - Twitter](https://twitter.com/celox_umbra)
 [John Cook - Linkedin](https://www.linkedin.com/in/john-cook-17a13b17a/)
+[John Cook's year one portfolio project](https://github.com/JohnCook17/OCR_for_whiteboarding)
 
 [Van Phan - github](https://github.com/vdphan)
 [Van Phan - Twitter](https://twitter.com/Van_wears_vans)
 [Van Phan - Linkedin](https://www.linkedin.com/in/van-phan-344764180/)
+[Van Phan's year one portfolio project](https://github.com/vdphan/Weat_project)
+
+## About the Authors
+Van is a great guy who is very smart, his code is clean and he works hard. He is easy to work with too.
+During this project, our first team project we where all nervous. looking back I would not have had it any
+other way. Van is a great software engineer. I would happily hire Van if I where in a position to do so.
+- John Cook
+
+John is a machine learning engineer now, fluent in Tensorflow, Keras, numpy and many other machine learning
+libraries. He is very good at python, and has experience in reinforcement learning, supervised learning, and
+unsupervised learning.
+
 
 ## Synopsis
 We created a simple function of printf function to print input data.
@@ -25,7 +38,8 @@ format is a character string. The format string is composed of zero or more dire
 ---
 
 ## Description
-The _printf() function is built based on our _putchar(). This _printf() write output to stdout, the standard output stream. The function returns  the number of characters printed (excluding the null byte used to end output to strings) or return -1 if the function fail.
+The _printf() function is built based on our _putchar(). This _printf() write output to stdout, the standard output stream. The function returns  the number of characters printed (excluding the null byte used to end output to strings) or return -1 if the function fail. This project was difficult due to the fact that at the time we where new
+to coding. We could probably go back and implement all the features of printf but the ones we have are adequate to demonstrate the process.
 
 _printf() function creates output based on the following format specifier:
 
