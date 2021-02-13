@@ -3,13 +3,19 @@
 ## Author
 
 [John Cook - github](https://github.com/JohnCook17)
+
 [John Cook - Twitter](https://twitter.com/celox_umbra)
+
 [John Cook - Linkedin](https://www.linkedin.com/in/john-cook-17a13b17a/)
+
 [John Cook's year one portfolio project](https://github.com/JohnCook17/OCR_for_whiteboarding)
 
 [Van Phan - github](https://github.com/vdphan)
+
 [Van Phan - Twitter](https://twitter.com/Van_wears_vans)
+
 [Van Phan - Linkedin](https://www.linkedin.com/in/van-phan-344764180/)
+
 [Van Phan's year one portfolio project](https://github.com/vdphan/Weat_project)
 
 ## About the Authors
